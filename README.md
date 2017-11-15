@@ -445,7 +445,7 @@ des=xxxxxxxx
    
     git clone https://github.com/ipaynowORG/ipaynow_identity_python.git
 
-    1.cd 进入ipaynowPythonSdk 文件夹
+    1.cd 进入ipaynowIdentityPythonSdk文件夹
     2.执行 "python setup.py install"
     3.在代码中 import ipaynow
      参考示例代码
