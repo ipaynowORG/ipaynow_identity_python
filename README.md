@@ -447,11 +447,11 @@ des=xxxxxxxx
 
     1.cd 进入ipaynowIdentityPythonSdk文件夹
     2.执行 "python setup.py install"
-    3.在代码中 import ipaynow
+    3.在代码中 import ipaynow_identity
      参考示例代码
      示例代码
      cd 进入example文件夹
-     运行 python tradeTest.py 
+     运行 python messageTest.py
 
     messageTest.py
 
