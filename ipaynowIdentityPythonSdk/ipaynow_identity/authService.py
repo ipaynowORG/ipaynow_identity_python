@@ -5,7 +5,10 @@ from ipaynowIdentityPythonSdk.ipaynow_identity.desUtil import desDecrypt, md5Enc
 from pip._vendor import requests
 from ipaynowIdentityPythonSdk.ipaynow_identity.error import APIInputError
 
-url = "https://dby.ipaynow.cn/identify"  # 测试
+testUrl = "https://dby.ipaynow.cn/identify"  # 测试
+
+proUrl = "https://s.ipaynow.cn/auth" #生产
+
 
 '''
 手机号认证
@@ -18,8 +21,9 @@ idCardName 姓名
 certiType 证件类型
 bankCardNum 银行账户
 mobile 预留手机号
+isTest 是否测试 True 测试环境 False 生产环境
 '''
-def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, mobile):
+def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, mobile,isTest=True):
     paypara = {
         'funcode': "ID03",
         'appId': appId,
@@ -39,6 +43,10 @@ def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiTy
     except Exception as e:
         print(e)
         print(e.with_traceback)
+    if isTest:
+        url = testUrl
+    else:
+        url = proUrl
     resp = requests.post(url, messageStr)
     result = urllib.parse.unquote(resp.text)
     return1 = result.split("|")[0];
@@ -58,11 +66,12 @@ def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiTy
  appId 商户应用Id 
  appKey 商户应用秘钥
  mhtOrderNo 订单号
+ isTest 是否测试 True 测试环境 False 生产环境
 '''
 
 
-def queryCheckMobileNo(appId, appKey, desKey, mhtOrderNo):
-    return query("ID03_Query", appId, appKey, desKey, mhtOrderNo);
+def queryCheckMobileNo(appId, appKey, desKey, mhtOrderNo,isTest=True):
+    return query("ID03_Query", appId, appKey, desKey, mhtOrderNo,isTest);
 
 
 '''
@@ -76,10 +85,11 @@ idCardName 姓名
 certiType 证件类型
 bankCardNum 银行账户
 mobile 预留手机号
+isTest 是否测试 True 测试环境 False 生产环境
 '''
 
 
-def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, bankCardNum, mobile):
+def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, bankCardNum, mobile,isTest=True):
     paypara = {
         'funcode': "ID02",
         'appId': appId,
@@ -101,6 +111,10 @@ def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, 
     except Exception as e:
         print(e)
         print(e.with_traceback)
+    if isTest:
+        url = testUrl
+    else:
+        url = proUrl
     resp = requests.post(url, messageStr)
     result = urllib.parse.unquote(resp.text)
     return1 = result.split("|")[0];
@@ -120,11 +134,12 @@ def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, 
  appId 商户应用Id 
  appKey 商户应用秘钥
  mhtOrderNo 订单号
+ isTest 是否测试 True 测试环境 False 生产环境
 '''
 
 
-def queryCheckCard(appId, appKey, desKey, mhtOrderNo):
-    return query("ID02_Query", appId, appKey, desKey, mhtOrderNo);
+def queryCheckCard(appId, appKey, desKey, mhtOrderNo,isTest=True):
+    return query("ID02_Query", appId, appKey, desKey, mhtOrderNo,isTest);
 
 
 '''
@@ -135,8 +150,9 @@ def queryCheckCard(appId, appKey, desKey, mhtOrderNo):
     mhtOrderNo 商户订单号
     idcard 待认证身份证号
     cardName 待认证姓名
+    isTest 是否测试 True 测试环境 False 生产环境
 '''
-def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName):
+def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName,isTest=True):
     paypara = {
         'funcode': "ID01",
         'appId': appId,
@@ -153,6 +169,10 @@ def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName):
     except Exception as e:
         print(e)
         print(e.with_traceback)
+    if isTest:
+        url = testUrl
+    else:
+        url = proUrl
     resp = requests.post(url, messageStr)
     result = urllib.parse.unquote(resp.text)
     return1 = result.split("|")[0];
@@ -172,14 +192,15 @@ def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName):
  appId 商户应用Id 
  appKey 商户应用秘钥
  mhtOrderNo 订单号
+ isTest 是否测试 True 测试环境 False 生产环境
 '''
 
 
-def queryCheckID(appId, appKey, desKey, mhtOrderNo):
-    return query("ID01_Query", appId, appKey, desKey, mhtOrderNo);
+def queryCheckID(appId, appKey, desKey, mhtOrderNo,isTest=True):
+    return query("ID01_Query", appId, appKey, desKey, mhtOrderNo,isTest);
 
 
-def query(funcode, appId, appKey, desKey, mhtOrderNo):
+def query(funcode, appId, appKey, desKey, mhtOrderNo,isTest):
     paypara = {
         'funcode': funcode,
         'appId': appId,
@@ -194,6 +215,10 @@ def query(funcode, appId, appKey, desKey, mhtOrderNo):
     except Exception as e:
         print(e)
         print(e.with_traceback)
+    if isTest:
+        url = testUrl
+    else:
+        url = proUrl
     resp = requests.post(url, messageStr)
     result = urllib.parse.unquote(resp.text)
     return1 = result.split("|")[0];

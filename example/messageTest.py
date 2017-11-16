@@ -3,15 +3,15 @@
 from ipaynowIdentityPythonSdk.ipaynow_identity.authService import toCheckID, queryCheckID, toCheckCard, queryCheckCard, \
     toCheckMobileNo, queryCheckMobileNo
 
-# print(toCheckID("xxxxxxxxx","DK96gnOB7EmVDDaHgLTLEZqVgP0H0nML","abnMX6YXHjBdesCsn2TD8b25","checkId1","xxxxxxxxxxxxxxxxxxxx","xxx"))
+# print(toCheckID("xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","pyhtonCheckId1","xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxx",isTest=False))
 
 #身份认证查询
-# print(queryCheckID("xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","checkId1"))
+# print(queryCheckID("xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx",isTest=False))
 
-# print(toCheckCard("xxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxx","pythonCardbeijin3","xxxxxxxxxxxxxxxxxxxxxxxxx","xxx","01","dddddd","xxxxx"))
+# print(toCheckCard("xxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxx","pythonCardbeijin3","xxxxxxxxxxxxxxxxxxxxxxxxx","xxx","01","dddddd","xxxxx",isTest=False))
 
-# print(queryCheckCard("xxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","pythonCardbeijin0"))
+# print(queryCheckCard("xxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","pythonCardbeijin0",isTest=False))
 
-# print(toCheckMobileNo("xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxx","pythonCardbeijin3","xxxxxxxxxxxxxxxxxxxxxxxx","xxx","01","xxxxxxxxxxxxx"))
+# print(toCheckMobileNo("xxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxx","pythonCardbeijin3","xxxxxxxxxxxxxxxxxxxxxxxx","xxx","01","xxxxxxxxxxxxx",isTest=False))
 
-# print(queryCheckMobileNo("xxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","pythonCardbeijin3"))
+# print(queryCheckMobileNo("xxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxx","pythonCardbeijin3",isTest=False))
