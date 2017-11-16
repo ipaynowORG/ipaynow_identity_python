@@ -3,7 +3,7 @@
 from ipaynowIdentityPythonSdk.ipaynow_identity.authService import toCheckID, queryCheckID, toCheckCard, queryCheckCard, \
     toCheckMobileNo, queryCheckMobileNo
 
-# print(toCheckID("xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","pyhtonCheckId1","xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxx",isTest=False))
+print(toCheckID("xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx","pyhtonCheckId1","xxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxx",isTest=False))
 
 #身份认证查询
 # print(queryCheckID("xxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxxxxxxxxxx","xxxxxxxxxxxxxxxxx",isTest=False))

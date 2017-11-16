@@ -55,8 +55,9 @@
         mhtOrderNo 商户订单号
         idcard 待认证身份证号
         cardName 待认证姓名
+        isTest 是否测试 True 测试环境 False 生产环境
     '''
-    def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName)
+    def toCheckID(appId, appKey, desKey, mhtOrderNo, idcard, cardName,isTest)
 
 - 返回参数中的值的含义
 
@@ -113,10 +114,11 @@
          appId 商户应用Id 
          appKey 商户应用秘钥
          mhtOrderNo 订单号
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
         
         
-        def queryCheckID(appId, appKey, desKey, mhtOrderNo)
+        def queryCheckID(appId, appKey, desKey, mhtOrderNo,isTest)
 
 - 返回参数中的值的含义
 
@@ -180,10 +182,11 @@
         certiType 证件类型
         bankCardNum 银行账户
         mobile 预留手机号
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
         
         
-        def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, bankCardNum, mobile)
+        def toCheckCard(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, bankCardNum, mobile,isTest)
 
 - 返回参数中的值的含义
 
@@ -241,10 +244,11 @@
          appId 商户应用Id 
          appKey 商户应用秘钥
          mhtOrderNo 订单号
+         isTest 是否测试 True 测试环境 False 生产环境
         '''
         
         
-        def queryCheckCard(appId, appKey, desKey, mhtOrderNo)      
+        def queryCheckCard(appId, appKey, desKey, mhtOrderNo,isTest)      
         
 
 - 返回参数中的值的含义
@@ -317,8 +321,9 @@
         certiType 证件类型
         bankCardNum 银行账户
         mobile 预留手机号
+        isTest 是否测试 True 测试环境 False 生产环境
         '''
-        def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, mobile)    
+        def toCheckMobileNo(appId, appKey, desKey, mhtOrderNo, idcard, cardName, certiType, mobile,isTest)    
         
 - 返回参数中的值的含义
 
@@ -378,10 +383,11 @@
      appId 商户应用Id 
      appKey 商户应用秘钥
      mhtOrderNo 订单号
+     isTest 是否测试 True 测试环境 False 生产环境
     '''
     
     
-    def queryCheckMobileNo(appId, appKey, desKey, mhtOrderNo)       
+    def queryCheckMobileNo(appId, appKey, desKey, mhtOrderNo,isTest)       
         
 - 返回参数中的值的含义
 
